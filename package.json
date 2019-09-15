@@ -1,0 +1,14 @@
+{
+  "name": "project",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs",
+    "deploy": "bash deploy.sh"
+  },
+  "dependencies": {
+    "vuepress": "^0.14.4"
+  }
+}
