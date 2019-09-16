@@ -2,7 +2,7 @@
  * @Description: In User Settings Edit
  * @Author: your name
  * @Date: 2019-09-09 18:32:25
- * @LastEditTime: 2019-09-11 14:53:42
+ * @LastEditTime: 2019-09-16 20:25:56
  * @LastEditors: Please set LastEditors
  */
 module.exports = {
@@ -44,13 +44,26 @@ module.exports = {
            title: '异步',
            children: [
             '/Base/Aysnc/001Promise',
-            '/Base/Aysnc/002'
+            '/Base/Aysnc/002',
+            '/Base/Aysnc/003await'
            ]
          },
          {
           title: '浏览器',
           children: [
            '/Base/Browser/001DOMBOM',
+          ]
+        },
+        {
+          title: 'JS',
+          children: [
+            '/Base/JS/001prototype8',
+          ]
+        },
+        {
+          title: 'React',
+          children: [
+            '/Base/React/001lifecycle'
           ]
         }
      ],
