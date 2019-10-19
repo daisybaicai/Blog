@@ -2,7 +2,7 @@
  * @Description: In User Settings Edit
  * @Author: your name
  * @Date: 2019-09-19 20:18:42
- * @LastEditTime: 2019-09-19 20:25:47
+ * @LastEditTime: 2019-09-20 14:57:56
  * @LastEditors: Please set LastEditors
  -->
 # diff
@@ -31,5 +31,20 @@ component diff
 element diff
 
 
+
+---qita
+15 diff算法?
+把树形结构按照层级分解，只比较同级元素。
+给列表结构的每个单元添加唯一的key属性，方便比较。
+React 只会匹配相同 class 的 component（这里面的class指的是组件的名字）
+合并操作，调用 component 的 setState 方法的时候, React 将其标记为 - dirty.到每一个事件循环结束, React 检查所有标记 dirty的 component重新绘制.
+选择性子树渲染。开发人员可以重写shouldComponentUpdate提高diff的性能
+
+
+19 react 的虚拟dom是怎么实现的
+首先说说为什么要使用Virturl DOM，因为操作真实DOM的耗费的性能代价太高，所以react内部使用js实现了一套dom结构，在每次操作在和真实dom之前，使用实现好的diff算法，对虚拟dom进行比较，递归找出有变化的dom节点，然后对其进行更新操作。为了实现虚拟DOM，我们需要把每一种节点类型抽象成对象，每一种节点类型有自己的属性，也就是prop，每次进行diff的时候，react会先比较该节点类型，假如节点类型不一样，那么react会直接删除该节点，然后直接创建新的节点插入到其中，假如节点类型一样，那么会比较prop是否有更新，假如有prop不一样，那么react会判定该节点有更新，那么重渲染该节点，然后在对其子节点进行比较，一层一层往下，直到没有子节点
+
+#20 react 的渲染过程中，兄弟节点之间是怎么处理的？也就是key值不一样的时候
+通常我们输出节点的时候都是map一个数组然后返回一个ReactNode，为了方便react内部进行优化，我们必须给每一个reactNode添加key，这个key prop在设计值处不是给开发者用的，而是给react用的，大概的作用就是给每一个reactNode添加一个身份标识，方便react进行识别，在重渲染过程中，如果key一样，若组件属性有所变化，则react只更新组件对应的属性；没有变化则不更新，如果key不一样，则react先销毁该组件，然后重新创建该组件
 **参考：**
 - <https://zhuanlan.zhihu.com/p/20346379>

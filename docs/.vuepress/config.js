@@ -2,7 +2,7 @@
  * @Description: In User Settings Edit
  * @Author: your name
  * @Date: 2019-09-09 18:32:25
- * @LastEditTime: 2019-09-16 20:25:56
+ * @LastEditTime: 2019-09-29 22:30:43
  * @LastEditors: Please set LastEditors
  */
 module.exports = {
@@ -28,6 +28,7 @@ module.exports = {
       // 这里的'/' 指的是 docs文件夹路径
       // [以 '/' 结尾的默认指向该路径下README.md文件]
       { text: '知识点整理', link: '/Base/' },
+      { text: '算法' , link: '/Algorithm/'},
       // 多项，下拉形式
       {
         text: 'GitHub',
@@ -52,21 +53,63 @@ module.exports = {
           title: '浏览器',
           children: [
            '/Base/Browser/001DOMBOM',
+           '/Base/Browser/002Cookie'
           ]
         },
         {
           title: 'JS',
           children: [
             '/Base/JS/001prototype8',
+            '/Base/JS/002debounce',
+            '/Base/JS/003setmap',
+            '/Base/JS/004arrayCompare',
+            '/Base/JS/005Variablelifting',
+            '/Base/JS/006Array',
+            '/Base/JS/007callapplybind',
+            '/Base/JS/008Operatorprecedence'
           ]
         },
         {
           title: 'React',
           children: [
-            '/Base/React/001lifecycle'
+            '/Base/React/001lifecycle',
+            '/Base/React/002keys',
+            '/Base/React/003setState',
+            '/Base/React/004diff',
+            '/Base/React/005redux'
           ]
-        }
+        },
+        {
+          title: 'Vue',
+          children: [
+            '/Base/Vue/001Bidirectionalbinding',
+            '/Base/Vue/002SPA',
+            '/Base/Vue/003key',
+            '/Base/Vue/004vifvshow',
+            '/Base/Vue/005datafuntion',
+            '/Base/Vue/006Unidirectionalflow',
+            '/Base/Vue/007computedwatch',
+            '/Base/Vue/008vuearray',
+            '/Base/Vue/009keep-alive',
+          ]
+        },
+        {
+          title: 'Css',
+          children: [
+            '/Base/Css/001BFC',
+            '/Base/Css/002display',
+            '/Base/Css/003HZC',
+          ]
+        },
      ],
+     '/Algorithm/':[
+      {
+        title: '数组',
+        children: [
+         '/Algorithm/array/001array'
+        ]
+      },
+     ]
     },
   },
 }

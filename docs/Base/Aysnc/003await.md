@@ -2,10 +2,14 @@
  * @Description: In User Settings Edit
  * @Author: your name
  * @Date: 2019-09-16 11:30:03
- * @LastEditTime: 2019-09-16 11:45:37
+ * @LastEditTime: 2019-09-18 11:29:55
  * @LastEditors: Please set LastEditors
  -->
 # await
+
+  await必须在async内。
+  那么await等待的是什么呢？它会确保一个 promise 的内容都解决( resolve )或出错( reject )后才会进行下一步。
+  其实就是等待
 
 ## 以下代码输出是什么？(一)
 
@@ -33,6 +37,33 @@ main();
   - 三个任务发起的时候没有await，可以认为是同时发起了三个异步。
   - 之后各自await任务的结果。结果按最高耗时计算，由于三个耗时一样。所以结果是 10 * 1000ms。
   - Promise中new Promise(xx)相当于同步任务, 会立即执行, .then后面的是微任务。
+
+```javascript
+function wait() {
+  return new Promise(resolve =>
+    setTimeout(resolve, 10 * 1000)
+  )
+}
+
+async function main() {
+  const x = wait();
+  const y = wait();
+  const z = wait();
+  const arrs = [
+    x, y, z
+  ]
+  return Promise.all(arrs);
+}
+
+async function maintip() {
+  console.time();
+  await main();
+  console.timeEnd();
+}
+
+maintip();
+```
+也可以配合Promise.all来做.
 ## 以下代码输出是什么？(二)
 
 ```javascript
