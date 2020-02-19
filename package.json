@@ -1,14 +1,31 @@
 {
-  "name": "project",
-  "version": "1.0.0",
-  "main": "index.js",
-  "license": "MIT",
+  "name": "dsyblog",
   "scripts": {
     "dev": "vuepress dev docs",
     "build": "vuepress build docs",
     "deploy": "bash deploy.sh"
   },
+  "version": "1.0.0",
+  "description": "bolg",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "@vuepress/plugin-back-to-top": "^1.2.0",
+    "cz-conventional-changelog": "^3.0.2",
+    "markdownlint": "^0.16.0",
+    "vuepress": "^1.2.0",
+    "vuepress-bar": "^0.2.2",
+    "vuepress-plugin-permalink-pinyin": "^1.0.0",
+    "vuepress-plugin-rpurl": "github:boboidream/vuepress-plugin-rpurl"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
   "dependencies": {
-    "vuepress": "^0.14.4"
+    "vuepress-plugin-container": "^2.1.2",
+    "vuepress-plugin-git-log": "^1.0.1",
+    "vuepress-plugin-reading-progress": "^1.0.8"
   }
 }
