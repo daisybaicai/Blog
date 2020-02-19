@@ -4,7 +4,7 @@ heroImage: /img/indexImg.jpg
 heroText: Daisy Blog
 tagline: Welcome To Daisy Blog
 actionText: Get Start →
-actionLink: /Base/
+actionLink: /ji-chu/
 features:
 - title: Base - 知识点整理
   details: 对前端的知识点进行整理
